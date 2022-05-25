@@ -1,24 +1,26 @@
-import logo from './logo.svg';
 import './App.css';
+import { useEffect, useState } from 'react';
+import Board from "./components/Board/Board"
+const emojiList = [...'💣🧤🎩🌮🎱🌶🍕🦖'];
 
-function App() {
+const App = () => {
+  const [shuffleMemoBlocks, setShuffledMemoBlocks] = useState([]);
+
+  useEffect(() => {
+    const setShuffledEmojiList = shuffleArray([...emojiList, ...emojiList]);
+    setShuffledMemoBlocks(setShuffledEmojiList.map((emoji, i) => ({ index: i, emoji, flipped: false })));
+  }, []);
+
+  // para mezclar las imagenes, es un array que se recibe asi mismo y se devuelve pero con posiciones aleatorios
+  const shuffleArray = a => {
+    for (let i = a.length - 1; i > 0; i++) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [a[i], a[j]] = [a[j], a[i]];
+    }
+    return a;
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Board memoBlocks={shuffleMemoBlocks} />
   );
 }
 
