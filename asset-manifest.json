@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/memotest/static/css/main.e2c968e7.css",
+    "main.js": "/memotest/static/js/main.be6d0224.js",
+    "static/js/787.41b89b7d.chunk.js": "/memotest/static/js/787.41b89b7d.chunk.js",
+    "index.html": "/memotest/index.html",
+    "main.e2c968e7.css.map": "/memotest/static/css/main.e2c968e7.css.map",
+    "main.be6d0224.js.map": "/memotest/static/js/main.be6d0224.js.map",
+    "787.41b89b7d.chunk.js.map": "/memotest/static/js/787.41b89b7d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e2c968e7.css",
+    "static/js/main.be6d0224.js"
+  ]
+}
