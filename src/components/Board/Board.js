@@ -1,9 +1,9 @@
-import MemoBlock from "../MemoBlock/MemoBlock";
-import "./Board.css";
+import MemoBlock from '../MemoBlock/MemoBlock';
+import './Board.css';
 
-const Board = ({ memoBlocks }) => {
+const Board = ({ animating, handleMemoClick, memoBlocks }) => {
     return (
-        <main className="Board">
+        <main className="board">
             {memoBlocks.map((memoBlock, i) => {
                 return <MemoBlock key={`${i}_${memoBlock.emoji}`} animating={animating} handleMemoClick={handleMemoClick} memoBlock={memoBlock} />
             })}
